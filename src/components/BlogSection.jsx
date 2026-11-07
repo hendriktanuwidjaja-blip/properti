@@ -10,7 +10,7 @@ export const blogArticles = [
     category: 'Strategi Digital',
     readTime: '4 menit baca',
     snippet: 'Mengapa mengandalkan media sosial atau portal umum saja tidak cukup untuk closing properti bernilai miliaran rupiah?',
-    image: '/images/cliff-ocean.webp',
+    image: `${import.meta.env.BASE_URL}images/cliff-ocean.webp`,
     content: `
       <p>Banyak agen properti bertanya: <em>"Saya sudah punya Instagram, TikTok, dan pasang iklan di portal properti umum, apakah masih butuh website sendiri?"</em> Jawabannya adalah <strong>sangat butuh</strong>, terutama jika Anda ingin membidik segmen pembeli rumah primer, secondary mewah, maupun investor.</p>
       
@@ -37,7 +37,7 @@ export const blogArticles = [
     category: 'Tips Closing',
     readTime: '5 menit baca',
     snippet: 'Langkah taktis mendesain halaman listing properti agar pengunjung tergerak langsung menghubungi Anda via WhatsApp.',
-    image: '/images/hero-villa.webp',
+    image: `${import.meta.env.BASE_URL}images/hero-villa.webp`,
     content: `
       <p>Trafik pengunjung yang banyak tidak ada artinya jika tidak terjadi kontak. Tujuan utama website properti bukanlah sekadar etalase cantik, melainkan <strong>mesin konversi janji temu survey lokasi</strong>.</p>
       
@@ -61,7 +61,7 @@ export const blogArticles = [
     category: 'Digital Marketing',
     readTime: '6 menit baca',
     snippet: 'Strategi mudah memenangkan pencarian Google lokal di area spesialisasi wilayah properti Anda.',
-    image: '/images/jakson-house.webp',
+    image: `${import.meta.env.BASE_URL}images/jakson-house.webp`,
     content: `
       <p>Search Engine Optimization (SEO) lokal adalah senjata rahasia agen properti top producer untuk mendapatkan aliran pembeli tanpa bergantung pada promosi berbayar tanpa henti.</p>
 
