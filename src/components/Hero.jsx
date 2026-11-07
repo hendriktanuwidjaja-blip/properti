@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { ArrowRight, Globe, partners } from './icons.jsx'
 import './Hero.css'
 
@@ -10,36 +10,21 @@ const stats = [
 const bars = [34, 52, 44, 70, 88]
 
 export default function Hero() {
-  const videoRef = useRef(null)
   const [ready, setReady] = useState(false)
 
   useEffect(() => {
-    const video = videoRef.current
-    if (!video) return
-
-    const play = video.play()
-    if (play?.catch) play.catch(() => {})
-
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      video.pause()
-      setReady(true)
-    }
+    setReady(true)
   }, [])
 
   return (
     <section className="hero" id="home">
       <div className="hero__media">
-        <video
-          ref={videoRef}
-          className={`hero__video ${ready ? 'is-ready' : ''}`}
-          src={`${import.meta.env.BASE_URL}hero-loop.mp4`}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          aria-hidden="true"
-          onCanPlay={() => setReady(true)}
+        <img
+          className={`hero__bg-img ${ready ? 'is-ready' : ''}`}
+          src={`${import.meta.env.BASE_URL}images/hero-property-bg.jpg`}
+          alt="Arsitektur Properti Modern Eksklusif"
+          fetchPriority="high"
+          onLoad={() => setReady(true)}
         />
         <div className="hero__scrim" aria-hidden="true" />
         <div className="hero__rules" aria-hidden="true">
